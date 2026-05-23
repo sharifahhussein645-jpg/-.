@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FITS | Own Your Fit</title>
+
+<style>
+  body {
+    margin: 0;
+    background: #f6f1ea;
+    color: #2a1a12;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .container {
+    text-align: center;
+    max-width: 700px;
+    padding: 30px;
+  }
+
+  .title {
+    font-size: 50px;
+    letter-spacing: 6px;
+    color: #8b5a3c;
+    margin-bottom: 20px;
+  }
+
+  .text {
+    font-size: 18px;
+    line-height: 1.8;
+    white-space: pre-line;
+  }
+
+  .motto {
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #8b5a3c;
+  }
+
+  .links {
+    margin-top: 30px;
+  }
+
+  .links a {
+    display: block;
+    margin: 10px auto;
+    width: 200px;
+    padding: 12px;
+    text-decoration: none;
+    background: #8b5a3c;
+    color: white;
+    border-radius: 10px;
+  }
+
+  .links a:hover {
+    background: #6f452e;
+  }
+
+  .cursor {
+    display: inline-block;
+    width: 10px;
+    background: #2a1a12;
+    animation: blink 0.8s infinite;
+  }
+
+  @keyframes blink {
+    50% { opacity: 0; }
+  }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="title">FITS</div>
+
+  <div class="text" id="typing"></div>
+
+  <div class="motto">Own Your Fit</div>
+
+  <div class="links">
+    <a href="https://www.tiktok.com/@_fits.a" target="_blank">TikTok</a>
+    <a href="https://www.instagram.com/_fits.a?igsh=YzFqaHp3eWg0c2E=" target="_blank">Instagram</a>
+  </div>
+
+</div>
+
+<script>
+const text = `FITS started from a simple observation.
+How people express identity through what they wear.
+
+It is not just fashion.
+It is awareness.
+
+A reflection of mindset, presence, and individuality.
+
+FITS is not about trends.
+It is about understanding yourself through style.`;
+
+let i = 0;
+const speed = 35;
+
+function typeWriter() {
+  if (i < text.length) {
+    document.getElementById("typing").innerHTML += text.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+
+typeWriter();
+</script>
+
+</body>
+</html>
